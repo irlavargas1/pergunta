@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta</title>
+    <script>
+        function processarResposta() {
+            const resposta = document.querySelector('input[name="resposta"]:checked').value;
+            if (resposta === "sim") {
+                alert("Escolha certa! <3");
+                window.location.href = "https://youtu.be/b6pHp9iCqbQ?feature=shared"; // Link para a música
+            } else {
+                alert("Ah, quem sabe da próxima vez!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Aceita passar a vida agarradinha comigo?</h2>
+    <form onsubmit="processarResposta(); return false;">
+        <label>
+            <input type="radio" name="resposta" value="sim" required>
+            Sim :)
+        </label><br>
+        <label>
+            <input type="radio" name="resposta" value="nao">
+            Não :(
+        </label><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
